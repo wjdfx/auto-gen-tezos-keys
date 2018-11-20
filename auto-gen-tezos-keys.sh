@@ -5,9 +5,9 @@
 for {set i 0} {$i<=1000} {incr i} {
 spawn /mnt/tezos/tezos-client gen keys t$i -f
 expect "encrypt"
-send "KeyPassword\r" #input keypassword
+send "KeyPassword\r"
 sleep 1
 expect "Confirm:"
-send "KeyPassword\r" #input keypassword
+send "KeyPassword\r"
 expect eof
 }
